@@ -1,3 +1,10 @@
+# Verificar API Key al inicio
+gemini_key = os.environ.get('GEMINI_API_KEY')
+if gemini_key:
+    logger.info(f"✅ GEMINI_API_KEY encontrada: {gemini_key[:10]}...")
+else:
+    logger.error("❌ GEMINI_API_KEY NO encontrada en variables de entorno")
+
 import os
 import logging
 import asyncio
